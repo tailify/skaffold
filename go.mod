@@ -107,6 +107,8 @@ require (
 	sigs.k8s.io/yaml v1.2.0
 )
 
+require github.com/containerd/containerd v1.5.8
+
 require (
 	4d63.com/embedfiles v0.0.0-20190311033909-995e0740726f // indirect
 	cloud.google.com/go v0.97.0 // indirect

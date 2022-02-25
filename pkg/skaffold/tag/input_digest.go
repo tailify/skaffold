@@ -57,6 +57,7 @@ func (t *inputDigestTagger) GenerateTag(ctx context.Context, image latestV1.Arti
 	sort.Strings(srcFiles)
 	for _, d := range srcFiles {
 		h, err := fileHasher(d, image.Workspace)
+		fmt.Printf(">>>\t%s\t%s\t%s\n", image.ImageName, h, d)
 		if err != nil {
 			if os.IsNotExist(err) {
 				log.Entry(ctx).Tracef("skipping dependency %q for artifact cache calculation: %v", d, err)
